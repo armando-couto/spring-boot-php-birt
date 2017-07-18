@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>spring-boot-with-php</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.3.2.RELEASE</version>
     </parent>
-
-    <groupId>com.example</groupId>
-    <artifactId>spring-boot-php-birt</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    
-    <packaging>jar</packaging>
-    
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -34,16 +33,28 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        
+
         <dependency>
             <groupId>net.sourceforge</groupId>
             <artifactId>php-java-bridge</artifactId>
-            <version>6.2.1</version>
+            <version>1.0.1</version>
         </dependency>
-        
+        <dependency>
+            <groupId>net.sourceforge</groupId>
+            <artifactId>php-servlet</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>erp</id>
+            <url>http://52.206.67.186/artifactory/ext-release-local</url>
+        </repository>
+    </repositories>
 </project>

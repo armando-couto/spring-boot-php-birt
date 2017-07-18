@@ -18,3 +18,5 @@ try {
 } catch (JavaException $e) {
     echo "<pre>$e</pre>";
 }
+
+echo "Armandoooooooooo";
